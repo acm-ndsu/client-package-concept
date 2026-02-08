@@ -1,0 +1,55 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "client-package-concept"
+version = '0.0.1'
+description = 'Concept Byte-le Royale client package'
+readme = "README.md"
+requires-python = "==3.13.*"
+license = "MIT"
+keywords = []
+authors = [
+  {name = "bytele dev"},
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.13",
+]
+dependencies = [
+  "typer>=0.21.1",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest~=9.0.2",
+  "sphinx-autobuild~=2025.8.25",
+]
+docs = [
+  "sphinx~=8.2.3",
+  "sphinx-copybutton~=0.5.2",
+  "sphinx-tabs~=3.4.7",
+  "myst-parser~=4.0.1",
+  "shibuya~=2026.1.9",
+]
+
+[project.scripts]
+bytele = "client_package_concept.cli:app"
+
+[project.entry-points."pipx.run"]
+bytele = "client_package_concept.cli:app"
+
+[project.urls]
+Documentation = "https://github.com/ihoponyou/client-package-concept#readme"
+Discord = "https://discord.gg/"
+Issues = "https://github.com/ihoponyou/client-package-concept/issues"
+
+
+[tool.hatch.envs.types]
+extra-dependencies = [
+  "mypy>=1.0.0",
+]
+[tool.hatch.envs.types.scripts]
+check = "mypy --install-types --non-interactive {args:src/client_package_concept tests}"
