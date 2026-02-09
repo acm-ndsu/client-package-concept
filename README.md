@@ -1,7 +1,7 @@
 # client package concept
 
-[![PyPI - Version](https://img.shields.io/pypi/v/client-package-concept.svg)](https://pypi.org/project/client-package-concept)
-[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/client-package-concept.svg)](https://pypi.org/project/client-package-concept)
+[![PyPI - Version](https://img.shields.io/pypi/v/client-package-concept.svg)](https://test.pypi.org/p/client-package-concept/)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/client-package-concept.svg)](https://test.pypi.org/p/client-package-concept/)
 
 -----
 
