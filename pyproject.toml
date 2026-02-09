@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "client-package-concept"
-version = '0.0.1'
+version = '0.0.2'
 description = 'Concept Byte-le Royale client package'
 readme = "README.md"
 requires-python = "==3.13.*"
@@ -42,10 +42,10 @@ bytele = "client_package_concept.cli:app"
 bytele = "client_package_concept.cli:app"
 
 [project.urls]
+Source = "https://github.com/acm-ndsu/client-package-concept/"
 Documentation = "https://github.com/ihoponyou/client-package-concept#readme"
 Discord = "https://discord.gg/"
 Issues = "https://github.com/ihoponyou/client-package-concept/issues"
-
 
 [tool.hatch.envs.types]
 extra-dependencies = [
