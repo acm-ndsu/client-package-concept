@@ -3,8 +3,6 @@
 [![PyPI - Version](https://img.shields.io/pypi/v/client-package-concept.svg)](https://test.pypi.org/p/client-package-concept/)
 [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/client-package-concept.svg)](https://test.pypi.org/p/client-package-concept/)
 
------
-
 ## Table of Contents
 
 - [Installation](#installation)
