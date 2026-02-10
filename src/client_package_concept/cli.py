@@ -30,9 +30,9 @@ def game(
 
 @app.command(help="Register a new team")
 def register(
-    team_name: Annotated[str, typer.Option(help="Your desired team name")],
-    team_type: Annotated[TeamType, typer.Option(prompt="Have you graduated?")],
-    university: Annotated[University, typer.Option(help="Your university")],
+    team_name: Annotated[str, typer.Option(help="Your desired team name", prompt=True)],
+    team_type: Annotated[TeamType, typer.Option(help="Your team type", prompt=True)],
+    university: Annotated[University, typer.Option(help="Your university", prompt=True)],
 ):
     Client().register(team_name, team_type, university)
 
