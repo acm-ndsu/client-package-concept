@@ -53,3 +53,6 @@ extra-dependencies = [
 ]
 [tool.hatch.envs.types.scripts]
 check = "mypy --install-types --non-interactive {args:src/client_package_concept tests}"
+
+[pytest]
+addopts = ["--import-mode=importlib"]

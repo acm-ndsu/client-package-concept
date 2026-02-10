@@ -6,6 +6,8 @@
 ## Table of Contents
 
 - [Installation](#installation)
+- [Usage](#usage)
+- [Development](#development)
 - [License](#license)
 
 ## Installation
@@ -14,21 +16,10 @@
 pip install client-package-concept
 ```
 
-```
-Usage: bytele [OPTIONS] COMMAND [ARGS]...
+## Usage
 
-╭─ Options ──────────────────────────────────────────────────────────────────────────────╮
-│ --install-completion          Install completion for the current shell.                │
-│ --show-completion             Show completion for the current shell, to copy it or     │
-│                               customize the installation.                              │
-│ --help                        Show this message and exit.                              │
-╰────────────────────────────────────────────────────────────────────────────────────────╯
-╭─ Commands ─────────────────────────────────────────────────────────────────────────────╮
-│ game                                                                                   │
-│ register                                                                               │
-│ error                                                                                  │
-│ echo                                                                                   │
-╰────────────────────────────────────────────────────────────────────────────────────────╯
+```
+bytele [-h|--help]
 ```
 
 ## Development
@@ -36,7 +27,7 @@ Usage: bytele [OPTIONS] COMMAND [ARGS]...
 ```console
 python3.13 -m venv <venv>
 <activate venv>
-pip install "." ".[dev]" ".[docs]"
+pip install [-e|--editable] "." ".[dev]" ".[docs]"
 ```
 
 ## License

@@ -15,17 +15,12 @@ app = typer.Typer(
 )
 
 
-@app.command()
+@app.command(help="Generate/run/visualize a game", no_args_is_help=True)
 def game(
-    ctx: typer.Context,
     generate: Annotated[bool, typer.Option("-g", "--generate", help="Generate a new map?")] = False,
     run: Annotated[bool, typer.Option("-r", "--run", help="Run a game?")] = False,
     visualize: Annotated[bool, typer.Option("-v", "--visualize", help="Visualize the last game?")] = False,
 ):
-    if not (generate or run or visualize):
-        print(ctx.get_help())
-        return
-
     if generate:
         generate_map()
     if run:
@@ -33,7 +28,7 @@ def game(
     if visualize:
         Visualizer().loop()
 
-@app.command()
+@app.command(help="Register a new team")
 def register(
     team_name: Annotated[str, typer.Option(help="Your desired team name")],
     team_type: Annotated[TeamType, typer.Option(prompt="Have you graduated?")],
@@ -41,11 +36,11 @@ def register(
 ):
     Client().register(team_name, team_type, university)
 
-@app.command()
+@app.command(help="Raises an error")
 def error():
     raise ArithmeticError() from KeyError()
 
-@app.command()
+@app.command(help="Prints user input")
 def echo():
     print(input("echo what? "))
 
